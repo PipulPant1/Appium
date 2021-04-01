@@ -1,12 +1,12 @@
 package pages;
 
-import BaseClass.BaseTest;
-import utils.TestUtils;
+import BaseClass.TestBotBase;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import utils.TestUtils;
 
-public class SettingsPage extends BaseTest{
+public class SettingsPage extends TestBotBase {
 	TestUtils utils = new TestUtils();
 	
 	@AndroidFindBy (accessibility="test-LOGOUT") 

@@ -1,12 +1,12 @@
 package BaseClass;
 
-import pages.SettingsPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import pages.SettingsPage;
 import utils.TestUtils;
 
-public class MenuPage extends BaseTest {
+public class MenuPage extends TestBotBase {
 	TestUtils utils = new TestUtils();
 	
 	@AndroidFindBy (xpath="//android.view.ViewGroup[@content-desc=\"test-Menu\"]/android.view.ViewGroup/android.widget.ImageView\n" + 

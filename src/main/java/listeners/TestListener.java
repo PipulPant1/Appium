@@ -1,10 +1,8 @@
 package listeners;
 
-import BaseClass.BaseTest;
+import BaseClass.TestBotBase;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import reports.ExtentReport;
-import utils.TestUtils;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -12,6 +10,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import reports.ExtentReport;
+import utils.TestUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class TestListener implements ITestListener {
 			  utils.log().error(sw.toString());
 		}
 		
-		BaseTest base = new BaseTest();
+		TestBotBase base = new TestBotBase();
 		File file = base.getDriver().getScreenshotAs(OutputType.FILE);
 		
 		byte[] encoded = null;
@@ -69,7 +69,7 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		BaseTest base = new BaseTest();
+		TestBotBase base = new TestBotBase();
 		ExtentReport.startTest(result.getName(), result.getMethod().getDescription())
 		.assignCategory(base.getPlatform() + "_" + base.getDeviceName())
 		.assignAuthor("Omprakash");		

@@ -1,7 +1,7 @@
 package utils;
 
 
-import BaseClass.BaseTest;
+import BaseClass.TestBotBase;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -58,7 +58,7 @@ public class TestUtils {
 	}
 	
 	public void log(String txt) {
-		BaseTest base = new BaseTest();
+		TestBotBase base = new TestBotBase();
 		String msg = Thread.currentThread().getId() + ":" + base.getPlatform() + ":" + base.getDeviceName() + ":"
 				+ Thread.currentThread().getStackTrace()[2].getClassName() + ":" + txt;
 		

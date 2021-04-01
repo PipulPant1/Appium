@@ -1,6 +1,6 @@
 package LoginTest;
 
-import BaseClass.BaseTest;
+import BaseClass.TestBotBase;
 import pages.LoginPage;
 import pages.ProductsPage;
 import utils.TestUtils;
@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 
-public class LoginTests extends BaseTest{
+public class LoginTests extends TestBotBase {
 	LoginPage loginPage;
 	ProductsPage productsPage;
 	JSONObject loginUsers;
