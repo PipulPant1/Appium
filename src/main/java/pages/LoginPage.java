@@ -5,9 +5,12 @@ import BaseClass.TestBotBase;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import utils.Log;
 import utils.TestUtils;
 
 public class LoginPage extends TestBotBase {
+	Log log= new Log(this.getClass());
+
 	TestUtils utils = new TestUtils();
 	@AndroidFindBy (accessibility = "test-Username") 
 	@iOSXCUITFindBy (id = "test-Username")
@@ -26,6 +29,7 @@ public class LoginPage extends TestBotBase {
 	private MobileElement errTxt;
 	
 public LoginPage enterUserName(String username) {
+
 	clear(usernameTxtFld);	
 	sendKeys(usernameTxtFld, username, "login with " + username);
 	return this;
@@ -38,7 +42,7 @@ public LoginPage enterPassword(String password) {
 }
 
 public ProductsPage pressLoginBtn() {
-	click(loginBtn, "press login button");
+	click(loginBtn, "Press login button");
 	return new ProductsPage();
 }
 

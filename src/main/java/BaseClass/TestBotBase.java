@@ -25,6 +25,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import reports.ExtentReport;
+import utils.Log;
 import utils.TestUtils;
 
 import java.io.File;
@@ -42,6 +43,8 @@ import java.util.Properties;
  * @author Pipul Pant
  */
 public class TestBotBase {
+	Log log= new Log(this.getClass());
+
 	protected static ThreadLocal<AppiumDriver> driver = new ThreadLocal<AppiumDriver>();
 	protected static ThreadLocal<Properties> props = new ThreadLocal<Properties>();
 	protected static ThreadLocal<HashMap<String, String>> strings = new ThreadLocal<HashMap<String, String>>();

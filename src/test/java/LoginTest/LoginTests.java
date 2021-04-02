@@ -3,6 +3,7 @@ package LoginTest;
 import BaseClass.TestBotBase;
 import pages.LoginPage;
 import pages.ProductsPage;
+import utils.Log;
 import utils.TestUtils;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -13,7 +14,10 @@ import java.io.InputStream;
 import java.lang.reflect.Method;
 
 public class LoginTests extends TestBotBase {
-	LoginPage loginPage;
+	Log log= new Log(this.getClass());
+
+	LoginPage loginPage=new LoginPage();;
+
 	ProductsPage productsPage;
 	JSONObject loginUsers;
 	TestUtils utils = new TestUtils();
@@ -38,20 +42,12 @@ public class LoginTests extends TestBotBase {
 		  launchApp();
 	  }
 
-	  @AfterClass
-	  public void afterClass() {
-	  }
-	  
+
+
 	  @BeforeMethod
 	  public void beforeMethod(Method m) {
-		  utils.log().info("\n" + "****** starting test:" + m.getName() + "******" + "\n");
-		  loginPage = new LoginPage();
 	  }
 
-	  @AfterMethod
-	  public void afterMethod() {		  
-	  }
-	  
 	  @Test
 	  public void invalidUserName() {
 		  loginPage.enterUserName(loginUsers.getJSONObject("invalidUser").getString("username"));

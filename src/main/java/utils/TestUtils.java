@@ -18,6 +18,8 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class TestUtils {
+	Log log= new Log(this.getClass());
+
 	public static final long WAIT = 10;
 	
 	public HashMap<String, String> parseStringXML(InputStream file) throws Exception{
