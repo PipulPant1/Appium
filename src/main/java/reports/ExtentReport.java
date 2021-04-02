@@ -4,11 +4,14 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import utils.Log;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ExtentReport {
+    Log log= new Log(this.getClass());
+
     static ExtentReports extent;
     final static String filePath = "Extent.html";
     static Map<Integer, ExtentTest> extentTestMap = new HashMap();

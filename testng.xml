@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="listeners.TestListener" />
     </listeners>
-    <test name="Pixel_2">
+    <test name="HONOR PLAY">
 
         <parameter name="emulator" value="false" />
         <parameter name="platformName" value="Android" />
@@ -14,9 +14,20 @@
         <parameter name="chromeDriverPort" value="11000" />
         <classes>
             <class name="LoginTest.LoginTests"/>
-            <!--            //<class name="com.qa.tests.ProductTests"/>-->
         </classes>
     </test>
+<!--    <test name="REDMI NOTE 8">-->
+
+<!--        <parameter name="emulator" value="false" />-->
+<!--        <parameter name="platformName" value="Android" />-->
+<!--        <parameter name="udid" value="13878b71" />-->
+<!--        <parameter name="deviceName" value="Redmi Note 8" />-->
+<!--        <parameter name="systemPort" value="10000" />-->
+<!--        <parameter name="chromeDriverPort" value="11000" />-->
+<!--        <classes>-->
+<!--            <class name="LoginTest.LoginTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
     <!--    <test name="iPhone11">-->
 
     <!--        <parameter name="platformName" value="iOS" />-->
